@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Flexbox</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 75%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+            min-height: 600px;
+            background-color: black;
+        }
+        .box{
+            text-align: center;
+            background: #f2f2f2;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+
+        }
+        .box-1{
+            /* order: 2; */
+            background-color: red;
+            /* flex-grow: 1; */
+        }
+        .box-2{
+            /* order: 1; */
+            background-color: blue;
+            flex-grow: 1;
+            /* flex-grow: 2; */
+            /* align-self: flex-start; */
+        }
+        .box-3{
+            /* order: 3; */
+            background-color: green;
+            /* flex-grow: 3;  */
+        }
+        /* flex grow özelliğiyle orantılı olarak kutuların boyutlarını ayarlayabiliriz. flex grow yerine sadece flex yazsak da aynı anlama gelir */
+        /* align-items özelliği sayesinde yapacağımız şey ise tüm hepsini alıp  aynı yere yerleştirmemizi sağlar. */
+        /* align-self özelliği sayesinde istediğimiz herhangi bir kutunun yerini değiştirebiliriz. */
+        /* order özelliği sayesinde normalde sırayla seçtiğimiz box ları tekrardan sıralayabiliyoruz. */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+    </div>
+</body>
+</html>
